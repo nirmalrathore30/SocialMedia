@@ -28,3 +28,11 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/nirmalrathore30/SocialMedia.git
+```
+## Running Tests
+
+We have implemented unit tests for various components in the application. You can run the tests using the following command:
+
+```bash
+npm test
+```
