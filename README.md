@@ -27,5 +27,4 @@ Make sure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/react-native-social-media-app.git
-cd react-native-social-media-app
+git clone https://github.com/nirmalrathore30/SocialMedia.git
