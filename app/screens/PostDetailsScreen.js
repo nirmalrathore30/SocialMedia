@@ -5,6 +5,7 @@ import Video from 'react-native-video';
 
 const PostDetailsScreen = ({ route }) => {
   const { post } = route.params;
+  console.log('post: ', post);
 
   return (
     <View style={styles.container}>

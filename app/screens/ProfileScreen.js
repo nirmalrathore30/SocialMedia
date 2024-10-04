@@ -18,14 +18,14 @@ const userPosts = Array.from({ length: 30 }, (_, index) => ({
 
 const UserProfileScreen = () => {
   const renderPostItem = ({ item }) => (
-    <Image source={{ uri: item.mediaURL }} style={styles.postImage} />
+    <Image testID='user-post' source={{ uri: item.mediaURL }} style={styles.postImage} />
   );
 
   return (
     <View style={styles.container}>
       {/* Profile Header */}
       <View style={styles.profileHeader}>
-        <Avatar.Image source={{ uri: userProfile.userAvatar }} size={80} />
+        <Avatar.Image testID='avatar' source={{ uri: userProfile.userAvatar }} size={80} />
         <View style={styles.profileInfo}>
           <Text style={styles.username}>{userProfile.username}</Text>
           <Text  style={styles.bio}>{userProfile.bio}</Text>

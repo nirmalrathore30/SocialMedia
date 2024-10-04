@@ -1,0 +1,835 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfileScreen should match the snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "flex": 1,
+      "padding": 16,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 16,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "rgba(103, 80, 164, 1)",
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        accessibilityIgnoresInvertColors={true}
+        source={
+          {
+            "uri": "https://randomuser.me/api/portraits/men/1.jpg",
+          }
+        }
+        style={
+          {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          }
+        }
+        testID="avatar"
+      />
+    </View>
+    <View
+      style={
+        {
+          "marginHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Nirmal Rathore
+      </Text>
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 14,
+          }
+        }
+      >
+        Just a simple guy who loves photography.
+      </Text>
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 12,
+            "marginTop": 4,
+          }
+        }
+      >
+        1500
+         Followers • 
+        30
+         Posts
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView
+    data={
+      [
+        {
+          "id": "1",
+          "mediaURL": "https://picsum.photos/id/0/400/300",
+        },
+        {
+          "id": "2",
+          "mediaURL": "https://picsum.photos/id/1/400/300",
+        },
+        {
+          "id": "3",
+          "mediaURL": "https://picsum.photos/id/2/400/300",
+        },
+        {
+          "id": "4",
+          "mediaURL": "https://picsum.photos/id/3/400/300",
+        },
+        {
+          "id": "5",
+          "mediaURL": "https://picsum.photos/id/4/400/300",
+        },
+        {
+          "id": "6",
+          "mediaURL": "https://picsum.photos/id/5/400/300",
+        },
+        {
+          "id": "7",
+          "mediaURL": "https://picsum.photos/id/6/400/300",
+        },
+        {
+          "id": "8",
+          "mediaURL": "https://picsum.photos/id/7/400/300",
+        },
+        {
+          "id": "9",
+          "mediaURL": "https://picsum.photos/id/8/400/300",
+        },
+        {
+          "id": "10",
+          "mediaURL": "https://picsum.photos/id/9/400/300",
+        },
+        {
+          "id": "11",
+          "mediaURL": "https://picsum.photos/id/10/400/300",
+        },
+        {
+          "id": "12",
+          "mediaURL": "https://picsum.photos/id/11/400/300",
+        },
+        {
+          "id": "13",
+          "mediaURL": "https://picsum.photos/id/12/400/300",
+        },
+        {
+          "id": "14",
+          "mediaURL": "https://picsum.photos/id/13/400/300",
+        },
+        {
+          "id": "15",
+          "mediaURL": "https://picsum.photos/id/14/400/300",
+        },
+        {
+          "id": "16",
+          "mediaURL": "https://picsum.photos/id/15/400/300",
+        },
+        {
+          "id": "17",
+          "mediaURL": "https://picsum.photos/id/16/400/300",
+        },
+        {
+          "id": "18",
+          "mediaURL": "https://picsum.photos/id/17/400/300",
+        },
+        {
+          "id": "19",
+          "mediaURL": "https://picsum.photos/id/18/400/300",
+        },
+        {
+          "id": "20",
+          "mediaURL": "https://picsum.photos/id/19/400/300",
+        },
+        {
+          "id": "21",
+          "mediaURL": "https://picsum.photos/id/20/400/300",
+        },
+        {
+          "id": "22",
+          "mediaURL": "https://picsum.photos/id/21/400/300",
+        },
+        {
+          "id": "23",
+          "mediaURL": "https://picsum.photos/id/22/400/300",
+        },
+        {
+          "id": "24",
+          "mediaURL": "https://picsum.photos/id/23/400/300",
+        },
+        {
+          "id": "25",
+          "mediaURL": "https://picsum.photos/id/24/400/300",
+        },
+        {
+          "id": "26",
+          "mediaURL": "https://picsum.photos/id/25/400/300",
+        },
+        {
+          "id": "27",
+          "mediaURL": "https://picsum.photos/id/26/400/300",
+        },
+        {
+          "id": "28",
+          "mediaURL": "https://picsum.photos/id/27/400/300",
+        },
+        {
+          "id": "29",
+          "mediaURL": "https://picsum.photos/id/28/400/300",
+        },
+        {
+          "id": "30",
+          "mediaURL": "https://picsum.photos/id/29/400/300",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "marginTop": 10,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/0/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/1/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/2/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/3/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/4/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/5/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/6/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/7/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/8/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/9/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/10/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/11/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/12/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/13/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/14/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/15/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/16/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/17/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/18/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/19/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/20/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/21/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/22/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/23/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/24/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/25/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/26/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/27/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/28/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+          <Image
+            source={
+              {
+                "uri": "https://picsum.photos/id/29/400/300",
+              }
+            }
+            style={
+              {
+                "aspectRatio": 1,
+                "height": 120,
+                "width": "33.33%",
+              }
+            }
+            testID="user-post"
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

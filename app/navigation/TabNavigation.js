@@ -5,6 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FeedScreen from '../screens/FeedScreen';
 import CreatePostScreen from '../screens/CreatePostScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import FeedStack from './FeedStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +13,7 @@ export default function TabNavigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Feed"
+        initialRouteName="FeedStack"
         screenOptions={{
           tabBarActiveTintColor: '#6200ea',
           tabBarInactiveTintColor: 'gray',
@@ -26,13 +27,14 @@ export default function TabNavigation() {
       >
         <Tab.Screen
           options={{
+            headerShown:false,
             tabBarLabel: 'Home',
             tabBarIcon: ({color, size}) => (
               <MaterialCommunityIcons name="home-outline" color={color} size={size} />
             ),
           }}
-          name="Feed"
-          component={FeedScreen}
+          name="FeedStack"
+          component={FeedStack}
         />
         <Tab.Screen
           options={{

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   FlatList,
   View,
@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import firestore from '@react-native-firebase/firestore';
-import { Avatar, Card, Button } from 'react-native-paper';
+import {Avatar, Card, Button} from 'react-native-paper';
 import Video from 'react-native-video';
-import { useIsFocused } from '@react-navigation/native';
+import {useIsFocused} from '@react-navigation/native';
 
-const FeedScreen = ({ navigation }) => {
+const FeedScreen = ({navigation}) => {
   const [allPosts, setAllPosts] = useState([]); // All fetched posts
   const [displayedPosts, setDisplayedPosts] = useState([]); // Posts to display
   const [loading, setLoading] = useState(true);
@@ -22,11 +22,11 @@ const FeedScreen = ({ navigation }) => {
 
   // Function to generate dummy posts
   const generateDummyPosts = () => {
-    return Array.from({ length: 200 }, (_, index) => ({
+    return Array.from({length: 200}, (_, index) => ({
       id: (index + 1).toString(),
       username: `user_${index + 1}`,
       userAvatar: `https://randomuser.me/api/portraits/men/${index}.jpg`,
-      mediaURL: `https://picsum.photos/id/${(index % 100)}/400/300`,
+      mediaURL: `https://picsum.photos/id/${index % 100}/400/300`,
       mediaType: index % 2 === 0 ? 'image' : 'video',
       title: `Post Title ${index + 1}`,
       description: `This is the description for post number ${index + 1}.`,
@@ -43,21 +43,27 @@ const FeedScreen = ({ navigation }) => {
       unsubscribe = firestore()
         .collection('posts')
         .orderBy('timestamp', 'desc')
-        .onSnapshot(querySnapshot => {
-          const postsArray = [];
-          querySnapshot.forEach(doc => {
-            postsArray.push({ id: doc.id, ...doc.data() });
-          });
+        .onSnapshot(
+          querySnapshot => {
+            const postsArray = [];
+            querySnapshot.forEach(doc => {
+              postsArray.push({id: doc.id, ...doc.data()});
+            });
 
-          // Generate dummy posts and combine with fetched posts
-          const dummyPosts = generateDummyPosts();
-          setAllPosts([...postsArray, ...dummyPosts]);
-          setDisplayedPosts([...postsArray.slice(0, itemsToShow), ...dummyPosts.slice(0, itemsToShow)]);
-          setLoading(false); // Set loading to false after data is fetched
-        }, (error) => {
-          console.error("Error fetching posts: ", error);
-          setLoading(false); // Ensure loading is set to false on error
-        });
+            // Generate dummy posts and combine with fetched posts
+            const dummyPosts = generateDummyPosts();
+            setAllPosts([...postsArray, ...dummyPosts]);
+            setDisplayedPosts([
+              ...postsArray.slice(0, itemsToShow),
+              ...dummyPosts.slice(0, itemsToShow),
+            ]);
+            setLoading(false); // Set loading to false after data is fetched
+          },
+          error => {
+            console.error('Error fetching posts: ', error);
+            setLoading(false); // Ensure loading is set to false on error
+          },
+        );
     }
 
     return () => unsubscribe && unsubscribe();
@@ -75,35 +81,42 @@ const FeedScreen = ({ navigation }) => {
     }
   };
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({item}) => (
     <TouchableOpacity
-      onPress={() => navigation.navigate('PostDetails', {
-        post: item,
-      })}>
-      <Card style={{ marginBottom: 20 }}>
+      onPress={() =>
+        navigation.navigate('FeedStack', {
+          screen: 'PostDetails',
+          params: {post: item},
+        })
+      }>
+      <Card style={{marginBottom: 20}}>
         <Card.Title
-          title={item.username?item.username:"Dummy"}
+          title={item.username ? item.username : 'Post 1'}
           left={() => (
             <Avatar.Image
               size={40}
-              source={{ uri: item.userAvatar?  item.userAvatar :"https://randomuser.me/api/portraits/men/3.jpg" }} // Display user avatar
+              source={{
+                uri: item.userAvatar
+                  ? item.userAvatar
+                  : 'https://randomuser.me/api/portraits/men/3.jpg',
+              }} // Display user avatar
             />
           )}
         />
         <Card.Content>
           {item.mediaType.includes('image') ? (
             <FastImage
-              style={{ width: '100%', height: 300 }}
-              source={{ uri: item.mediaURL }}
+              style={{width: '100%', height: 300}}
+              source={{uri: item.mediaURL}}
             />
           ) : (
             <Video
-              source={{ uri: item.mediaURL }}
-              style={{ width: '100%', height: 300 }}
+              source={{uri: item.mediaURL}}
+              style={{width: '100%', height: 300}}
               controls
             />
           )}
-          <Text style={{ marginTop: 10 }}>{item.title}</Text>
+          <Text style={{marginTop: 10}}>{item.title}</Text>
           <Text>{item.description}</Text>
           <Text>
             {item.timestamp?.seconds &&
@@ -118,11 +131,11 @@ const FeedScreen = ({ navigation }) => {
   );
 
   return loading ? (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ActivityIndicator size="large" color="#0000ff" />
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <ActivityIndicator  testID="loading-indicator" size="large" color="#0000ff" />
     </View>
   ) : (
-    <View style={{ flex: 1 }}>
+    <View style={{flex: 1}}>
       <FlatList
         data={displayedPosts} // Render the displayed posts
         renderItem={renderItem}
@@ -131,7 +144,7 @@ const FeedScreen = ({ navigation }) => {
         onEndReachedThreshold={0.5} // Threshold for triggering load more
       />
       {loadingMore && (
-        <View style={{ padding: 20, alignItems: 'center' }}>
+        <View style={{padding: 20, alignItems: 'center'}}>
           <ActivityIndicator size="small" color="#0000ff" />
           <Text>Loading more items...</Text>
         </View>
